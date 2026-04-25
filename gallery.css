@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: Libre Baskerville, serif;
+    color: #2c2c2c;
+}
+
+/* Navigation Bar - Clean e minimal */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 60px;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.nav-logo {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #2c2c2c;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    color: #2c2c2c;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #999;
+}
+
+/* Page Header - Minimal */
+.page-header {
+    text-align: center;
+    padding: 140px 20px 60px;
+    background-color: #fafafa;
+}
+
+.page-title {
+    font-size: 48px;
+    font-weight: 300;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    color: #2c2c2c;
+}
+
+.page-subtitle {
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    color: #999;
+}
+
+/* Gallery - Layout masonry dinamico */
+.gallery {
+    padding: 60px 60px 100px;
+    max-width: 1600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+.gallery-grid {
+    column-count: 3;
+    column-gap: 15px;
+}
+
+.photo {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background: #f5f5f5;
+    margin-bottom: 15px;
+    break-inside: avoid;
+    display: inline-block;
+    width: 100%;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease, filter 0.3s;
+}
+
+/* Overlay con descrizione che appare all'hover */
+.photo-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.photo:hover .photo-overlay {
+    opacity: 1;
+}
+
+.photo-overlay span {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.photo:hover img {
+    transform: scale(1.03);
+}
+
+/* Lightbox - Sfondo trasparente con blur */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.15);
+}
+
+/* Close button - Minimal */
+.lightbox-close {
+    position: fixed;
+    top: 35px;
+    right: 45px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 2001;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.lightbox:hover .lightbox-close {
+    opacity: 1;
+}
+
+.lightbox-close::before,
+.lightbox-close::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24px;
+    height: 1px;
+    background: #2c2c2c;
+    transition: background 0.3s;
+}
+
+.lightbox-close::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.lightbox-close::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.lightbox-close:hover::before,
+.lightbox-close:hover::after {
+    background: #999;
+}
+
+/* Navigation arrows - Minimal e eleganti */
+.lightbox-nav {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    user-select: none;
+    opacity: 0;
+}
+
+.lightbox:hover .lightbox-nav {
+    opacity: 1;
+}
+
+.lightbox-prev {
+    left: 40px;
+}
+
+.lightbox-next {
+    right: 40px;
+}
+
+/* Freccia sinistra */
+.lightbox-prev::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border-left: 1px solid #2c2c2c;
+    border-bottom: 1px solid #2c2c2c;
+    transform: translate(-30%, -50%) rotate(45deg);
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.lightbox-prev:hover::before {
+    border-color: #999;
+    transform: translate(-35%, -50%) rotate(45deg);
+}
+
+/* Freccia destra */
+.lightbox-next::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border-right: 1px solid #2c2c2c;
+    border-bottom: 1px solid #2c2c2c;
+    transform: translate(-70%, -50%) rotate(-45deg);
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.lightbox-next:hover::before {
+    border-color: #999;
+    transform: translate(-65%, -50%) rotate(-45deg);
+}
+
+/* Footer - Minimal */
+footer {
+    background-color: #fafafa;
+    padding: 50px 60px;
+    text-align: center;
+    border-top: 1px solid #e5e5e5;
+}
+
+footer p {
+    color: #999;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 20px 30px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 25px;
+    }
+
+    .page-header {
+        padding: 120px 20px 50px;
+    }
+
+    .page-title {
+        font-size: 32px;
+        letter-spacing: 3px;
+    }
+
+    .page-subtitle {
+        font-size: 13px;
+        letter-spacing: 2px;
+    }
+
+    .gallery {
+        padding: 40px 20px 80px;
+    }
+
+    .gallery-grid {
+        column-count: 1;
+        column-gap: 0;
+    }
+
+    .photo {
+        margin-bottom: 12px;
+    }
+
+    .lightbox-content {
+        max-width: 95vw;
+        max-height: 95vh;
+    }
+
+    .lightbox img {
+        max-width: 95vw;
+        max-height: 95vh;
+    }
+
+    .lightbox-close {
+        top: 20px;
+        right: 20px;
+        opacity: 1;
+    }
+
+    .lightbox-nav {
+        opacity: 1;
+    }
+
+    .lightbox-prev {
+        left: 20px;
+    }
+
+    .lightbox-next {
+        right: 20px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}

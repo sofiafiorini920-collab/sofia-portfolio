@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spain - Gallery</title>
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-logo">MY PORTFOLIO</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <h1 class="page-title">Spain</h1>
+        <p class="page-subtitle">Culture & Architecture</p>
+    </div>
+
+    <div class="gallery">
+        <div class="gallery-grid">
+            
+            <div class="photo" onclick="openLightbox(0)">
+                <img src="images/spain/IMG_2078.jpg" alt="Spain 1">
+            </div>
+
+            <div class="photo" onclick="openLightbox(1)">
+                <img src="images/spain/IMG_0967-2.jpg" alt="Spain 2">
+            </div>
+
+            <div class="photo" onclick="openLightbox(2)">
+                <img src="images/spain/IMG_1131.jpg" alt="Spain 3">
+            </div>
+
+            <div class="photo" onclick="openLightbox(3)">
+                <img src="images/spain/IMG_0433.jpg" alt="Spain 3">
+            </div>
+
+            <div class="photo" onclick="openLightbox(4)">
+                <img src="images/spain/IMG_1692.jpg" alt="Spain 3">
+            </div>
+
+            <div class="photo" onclick="openLightbox(5)">
+                <img src="images/spain/IMG_0432.jpg" alt="Spain 3">
+            </div>
+
+            <div class="photo" onclick="openLightbox(6)">
+                <img src="images/spain/IMG_0406-2.jpg" alt="Spain 3">
+            </div>
+
+            <div class="photo" onclick="openLightbox(7)">
+                <img src="images/spain/IMG_0440.jpg" alt="Spain 3">
+            </div>
+
+            <div class="photo" onclick="openLightbox(8)">
+                <img src="images/spain/IMG_0665-2.jpg" alt="Spain 3">
+            </div>
+
+            <div class="photo" onclick="openLightbox(9)">
+                <img src="images/spain/IMG_1997-2.jpg" alt="Spain 3">
+            </div>
+
+            <div class="photo" onclick="openLightbox(10)">
+                <img src="images/spain/IMG_1834-2.jpg" alt="Spain 3">
+            </div>
+
+            <div class="photo" onclick="openLightbox(11)">
+                <img src="images/spain/IMG_1772.jpg" alt="Spain 3">
+            </div>
+
+            <div class="photo" onclick="openLightbox(12)">
+                <img src="images/spain/IMG_1850.jpg" alt="Spain 3">
+            </div>
+
+            <div class="photo" onclick="openLightbox(13)">
+                <img src="images/spain/IMG_1847.jpg" alt="Spain 3">
+            </div>
+
+            <div class="photo" onclick="openLightbox(14)">
+                <img src="images/spain/IMG_1848-2.jpg" alt="Spain 3">
+            </div>
+
+            <div class="photo" onclick="openLightbox(15)">
+                <img src="images/spain/IMG_1962-2.jpg" alt="Spain 3">
+            </div>
+
+            <div class="photo" onclick="openLightbox(16)">
+                <img src="images/spain/IMG_1788-2-2.jpg" alt="Spain 3">
+            </div>
+
+            <div class="photo" onclick="openLightbox(17)">
+                <img src="images/spain/IMG_1722.jpg" alt="Spain 3">
+            </div>
+
+            <div class="photo" onclick="openLightbox(18)">
+                <img src="images/spain/IMG_1856.jpg" alt="Spain 3">
+            </div>
+
+            <!-- Aggiungi altre foto -->
+
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+        <span class="lightbox-close" onclick="closeLightbox(event)">×</span>
+        <span class="lightbox-nav lightbox-prev" onclick="changeImage(-1, event)">‹</span>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+        </div>
+        <span class="lightbox-nav lightbox-next" onclick="changeImage(1, event)">›</span>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 My Photography Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const images = [
+            'images/spain/IMG_2078.jpg',
+            'images/spain/IMG_0967-2.jpg',
+            'images/spain/IMG_1131.jpg',
+            'images/spain/IMG_0433.jpg',
+            'images/spain/IMG_1692.jpg',
+            'images/spain/IMG_0432.jpg',
+            'images/spain/IMG_0406-2.jpg',
+            'images/spain/IMG_0440.jpg',
+            'images/spain/IMG_0665-2.jpg',
+            'images/spain/IMG_1997-2.jpg',
+            'images/spain/IMG_1834-2.jpg',
+            'images/spain/IMG_1772.jpg',
+            'images/spain/IMG_1850.jpg',
+            'images/spain/IMG_1847.jpg',
+            'images/spain/IMG_1848-2.jpg',
+            'images/spain/IMG_1962-2.jpg',
+            'images/spain/IMG_1788-2-2.jpg',
+            'images/spain/IMG_1722.jpg',
+            'images/spain/IMG_1856.jpg'
+        ];
+    </script>
+    <script src="gallery.js"></script>
+
+</body>
+</html>

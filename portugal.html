@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portugal - Gallery</title>
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-logo">MY PORTFOLIO</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <h1 class="page-title">Portugal</h1>
+        <p class="page-subtitle">Coastal Beauty</p>
+    </div>
+
+    <div class="gallery">
+        <div class="gallery-grid">
+            
+            <div class="photo" onclick="openLightbox(0)">
+                <img src="images/portugal/IMG_2859.jpg" alt="Portugal 1">
+            </div>
+
+            <div class="photo" onclick="openLightbox(1)">
+                <img src="images/portugal/IMG_2874.jpg" alt="Portugal 2">
+            </div>
+
+            <div class="photo" onclick="openLightbox(2)">
+                <img src="images/portugal/IMG_2875-2.jpg" alt="Portugal 3">
+            </div>
+
+            <div class="photo" onclick="openLightbox(3)">
+                <img src="images/portugal/IMG_2885.jpg" alt="Portugal 1">
+            </div>
+
+            <div class="photo" onclick="openLightbox(4)">
+                <img src="images/portugal/IMG_2891.jpg" alt="Portugal 2">
+            </div>
+
+            <div class="photo" onclick="openLightbox(5)">
+                <img src="images/portugal/IMG_2888.jpg" alt="Portugal 3">
+            </div>
+
+            <div class="photo" onclick="openLightbox(6)">
+                <img src="images/portugal/IMG_2897.jpg" alt="Portugal 1">
+            </div>
+
+            <div class="photo" onclick="openLightbox(7)">
+                <img src="images/portugal/IMG_2880.jpg" alt="Portugal 2">
+            </div>
+
+            <div class="photo" onclick="openLightbox(8)">
+                <img src="images/portugal/IMG_2906.jpg" alt="Portugal 3">
+            </div>
+
+            <div class="photo" onclick="openLightbox(9)">
+                <img src="images/portugal/IMG_2909.jpg" alt="Portugal 1">
+            </div>
+
+            <div class="photo" onclick="openLightbox(10)">
+                <img src="images/portugal/IMG_2924.jpg" alt="Portugal 2">
+            </div>
+
+            <div class="photo" onclick="openLightbox(11)">
+                <img src="images/portugal/IMG_2916.jpg" alt="Portugal 3">
+            </div>
+
+            <div class="photo" onclick="openLightbox(12)">
+                <img src="images/portugal/IMG_2928.jpg" alt="Portugal 3">
+            </div>
+
+            <!-- Aggiungi altre foto -->
+
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+        <span class="lightbox-close" onclick="closeLightbox(event)">×</span>
+        <span class="lightbox-nav lightbox-prev" onclick="changeImage(-1, event)">‹</span>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+        </div>
+        <span class="lightbox-nav lightbox-next" onclick="changeImage(1, event)">›</span>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 My Photography Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const images = [
+            'images/portugal/IMG_2859.jpg',
+            'images/portugal/IMG_2874.jpg',
+            'images/portugal/IMG_2875-2.jpg',
+            'images/portugal/IMG_2885.jpg',
+            'images/portugal/IMG_2891.jpg',
+            'images/portugal/IMG_2888.jpg',
+            'images/portugal/IMG_2897.jpg',
+            'images/portugal/IMG_2880.jpg',
+            'images/portugal/IMG_2906.jpg',
+            'images/portugal/IMG_2909.jpg',
+            'images/portugal/IMG_2924.jpg',
+            'images/portugal/IMG_2916.jpg',
+            'images/portugal/IMG_2928.jpg'
+        ];
+    </script>
+    <script src="gallery.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scotland - Gallery</title>
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-logo">MY PORTFOLIO</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Page Title -->
+    <div class="page-header">
+        <h1 class="page-title">Scotland</h1>
+        <p class="page-subtitle">Highlands & Lochs</p>
+    </div>
+
+    <!-- Photo Gallery -->
+    <div class="gallery">
+        <div class="gallery-grid">
+            
+            <div class="photo" onclick="openLightbox(0)">
+                <img src="images/scotland/IMG_0729.jpg" alt="Scotland 1">
+            </div>
+
+            <div class="photo" onclick="openLightbox(1)">
+                <img src="images/scotland/IMG_0813.jpg" alt="Scotland 2">
+            </div>
+
+            <div class="photo" onclick="openLightbox(2)">
+                <img src="images/scotland/IMG_0624.jpg" alt="Scotland 3">
+            </div>
+
+            <div class="photo" onclick="openLightbox(3)">
+                <img src="images/scotland/IMG_0700-2.jpg" alt="Scotland 4">
+            </div>
+
+            <div class="photo" onclick="openLightbox(4)">
+                <img src="images/scotland/IMG_0904.jpg" alt="Scotland 5">
+            </div>
+
+            <div class="photo" onclick="openLightbox(5)">
+                <img src="images/scotland/IMG_1024-2.jpg" alt="Scotland 6">
+            </div>
+
+            <div class="photo" onclick="openLightbox(6)">
+                <img src="images/scotland/IMG_0564.jpg" alt="Scotland 7">
+            </div>
+
+            <div class="photo" onclick="openLightbox(7)">
+                <img src="images/scotland/IMG_1787.jpg" alt="Scotland 8">
+            </div>
+
+            <div class="photo" onclick="openLightbox(8)">
+                <img src="images/scotland/IMG_1727-2.jpg" alt="Scotland 9">
+            </div>
+
+            <div class="photo" onclick="openLightbox(9)">
+                <img src="images/scotland/IMG_1307.jpg" alt="Scotland 10">
+            </div>
+
+            <div class="photo" onclick="openLightbox(10)">
+                <img src="images/scotland/IMG_1909.jpg" alt="Scotland 11">
+            </div>
+
+            <div class="photo" onclick="openLightbox(11)">
+                <img src="images/scotland/IMG_1949.jpg" alt="Scotland 13">
+            </div>
+
+            <div class="photo" onclick="openLightbox(12)">
+                <img src="images/scotland/IMG_1917.jpg" alt="Scotland 14">
+            </div>
+
+            <div class="photo" onclick="openLightbox(13)">
+                <img src="images/scotland/IMG_1934.jpg" alt="Scotland 15">
+            </div>
+
+            <div class="photo" onclick="openLightbox(14)">
+                <img src="images/scotland/IMG_1983.jpg" alt="Scotland 16">
+            </div>
+
+            <div class="photo" onclick="openLightbox(15)">
+                <img src="images/scotland/IMG_1891.jpg" alt="Scotland 17">
+            </div>
+
+            <div class="photo" onclick="openLightbox(16)">
+                <img src="images/scotland/IMG_1962.jpg" alt="Scotland 18">
+            </div>
+
+            <div class="photo" onclick="openLightbox(17)">
+                <img src="images/scotland/IMG_0864.jpg" alt="Scotland 19">
+            </div>
+
+            <div class="photo" onclick="openLightbox(18)">
+                <img src="images/scotland/IMG_1991.jpg" alt="Scotland 20">
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+        <span class="lightbox-close" onclick="closeLightbox(event)"></span>
+        <span class="lightbox-nav lightbox-prev" onclick="changeImage(-1, event)"></span>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+        </div>
+        <span class="lightbox-nav lightbox-next" onclick="changeImage(1, event)"></span>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 My Photography Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // IMPORTANTE: Aggiorna questo array con i percorsi delle tue foto
+        const images = [
+            'images/scotland/IMG_0729.jpg',
+            'images/scotland/IMG_0813.jpg',
+            'images/scotland/IMG_0624.jpg',
+            'images/scotland/IMG_0700-2.jpg',
+            'images/scotland/IMG_0904.jpg',
+            'images/scotland/IMG_1024-2.jpg',
+            'images/scotland/IMG_0564.jpg',
+            'images/scotland/IMG_1787.jpg',
+            'images/scotland/IMG_1727-2.jpg',
+            'images/scotland/IMG_1891.jpg',
+            'images/scotland/IMG_1962.jpg',
+            'images/scotland/IMG_1991.jpg',
+            'images/scotland/IMG_1307.jpg',
+            'images/scotland/IMG_1909.jpg',
+            'images/scotland/IMG_1949.jpg',
+            'images/scotland/IMG_1917.jpg',
+            'images/scotland/IMG_1934.jpg',
+            'images/scotland/IMG_1983.jpg',
+        ];
+    </script>
+    <script src="gallery.js"></script>
+
+</body>
+</html>

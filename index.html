@@ -1,41 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
-</head>
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My beautiful website</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            min-height: 90vh;
-            animation: changeBackground 15s infinite;
-            background-size: cover;
-            background-position: center;
-        }
-
-        @keyframes changeBackground {
-            0% {
-                background-image: url('images/IMG1.jpg.jpg');
-            }
-            33% {
-                background-image: url('images/IMG2.jpg.jpg');
-            }
-            66% {
-                background-image: url('images/IMG3.jpg.jpg');
-            }
-            100% {
-                background-image: url('images/IMG4.jpg.jpg');
-            }
-        }
-    </style>
+    <title>Travel Photography Portfolio</title>
+    <link rel="stylesheet" href="style-alternating.css">
 </head>
 <body>
-    <h1 style="color: white; text-align: center; padding-top: 50px;">
-        Your Content Here
-    </h1>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-logo">MY PORTFOLIO</div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Travel Photography</h1>
+            <p class="hero-subtitle">Explore the world through my lens</p>
+        </div>
+    </section>
+
+    <!-- Locations - Layout alternato -->
+    <div class="locations-container">
+
+        <!-- Scotland - Foto a sinistra -->
+        <div class="location-row">
+            <div class="location-image" style="background-image: url('images/scotland/IMG_1727-2.jpg');"></div>
+            <div class="location-text">
+                <h2>Scotland</h2>
+                <p>Highlands & Lochs</p>
+                <p class="location-description">
+                    Discover the rugged beauty of the Scottish Highlands, ancient castles, 
+                    and mysterious lochs shrouded in mist.
+                </p>
+                <a href="scotland.html" class="location-btn">View Gallery →</a>
+            </div>
+        </div>
+
+        <!-- Portugal - Foto a destra -->
+        <div class="location-row reverse">
+            <div class="location-image" style="background-image: url('images/portugal/IMG_2859.jpg');"></div>
+            <div class="location-text">
+                <h2>Portugal</h2>
+                <p>Coastal Beauty</p>
+                <p class="location-description">
+                    Experience the vibrant colors and the charm of Porto.
+                </p>
+                <a href="portugal.html" class="location-btn">View Gallery →</a>
+            </div>
+        </div>
+
+        <!-- Italy - Foto a sinistra -->
+        <div class="location-row">
+            <div class="location-image" style="background-image: url('images/italy/IMG_2330.jpg');"></div>
+            <div class="location-text">
+                <h2>Italy</h2>
+                <p>Eternal Beauty</p>
+                <p class="location-description">
+                    Wander through timeless cities filled with art, architecture, 
+                    and the unmistakable Italian dolce vita.
+                </p>
+                <a href="italy.html" class="location-btn">View Gallery →</a>
+            </div>
+        </div>
+
+        <!-- Spain - Foto a destra -->
+        <div class="location-row reverse">
+            <div class="location-image" style="background-image: url('images/spain/IMG_0432.jpg');"></div>
+            <div class="location-text">
+                <h2>Spain</h2>
+                <p>Culture & Architecture</p>
+                <p class="location-description">
+                    The land of tapas and flamenco.
+                </p>
+                <a href="spain.html" class="location-btn">View Gallery →</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 My Photography Portfolio. All rights reserved.</p>
+    </footer>
+
+    <!-- Script -->
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+
 </body>
 </html>
